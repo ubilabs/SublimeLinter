@@ -36,30 +36,14 @@ Quickstart
 
 Installing
 ----------
-**With the Package Control plugin:** The easiest way to install SublimeLinter is through Package Control, which can be found at this site: http://wbond.net/sublime_packages/package_control
 
-Once you install Package Control, restart ST2 and bring up the Command Palette (`Command+Shift+P` on OS X, `Control+Shift+P` on Linux/Windows). Select "Package Control: Install Package", wait while Package Control fetches the latest package list, then select SublimeLinter when the list appears. The advantage of using this method is that Package Control will automatically keep SublimeLinter up to date with the latest version.
+_Note:_ The package is a fork of the original plugin and does not work with Package Control. 
+To install SublimeLinter for Sublime Text 3, run the following commands:
 
-**Without Git:** Download the latest source from [GitHub](https://github.com/SublimeLinter/SublimeLinter) and copy the SublimeLinter folder to your Sublime Text "Packages" directory.
-
-**With Git:** Clone the repository in your Sublime Text "Packages" directory:
-
-    git clone https://github.com/SublimeLinter/SublimeLinter.git
-
-
-The "Packages" directory is located at:
-
-* OS X:
-
-        ~/Library/Application Support/Sublime Text 2/Packages/
-
-* Linux:
-
-        ~/.config/sublime-text-2/Packages/
-
-* Windows:
-
-        %APPDATA%/Sublime Text 2/Packages/
+```sh
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+git clone https://github.com/ubilabs/SublimeLinter3.git
+```
 
 ### JavaScript-based linters
 If you plan to edit files that use a JavaScript-based linter (JavaScript, CSS), your system
