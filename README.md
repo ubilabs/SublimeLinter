@@ -19,7 +19,7 @@ git clone https://github.com/ubilabs/SublimeLinter.git
 ```
 
 Language Support
-––––––––––––––––
+----------------
 
 SublimeLinter has built in linters for the following languages:
 
