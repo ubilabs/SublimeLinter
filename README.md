@@ -6,6 +6,21 @@ lines of code the linter deems to contain (potential) errors. It also
 supports highlighting special annotations (for example: TODO) so that they
 can be quickly located.
 
+Installing
+----------
+
+_Note:_ This package is a fork of the original plugin and does not work with Package Control.
+To install SublimeLinter for Sublime Text 3, run the following commands:
+
+```sh
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+rm -Rf SublimeLinter # remove outdated plugin
+git clone https://github.com/ubilabs/SublimeLinter.git
+```
+
+Language Support
+––––––––––––––––
+
 SublimeLinter has built in linters for the following languages:
 
 * C/C++ - lint via `cppcheck`
@@ -28,23 +43,10 @@ SublimeLinter has built in linters for the following languages:
 Quickstart
 ------------
 
-* Install using [Package Control ST2 plugin](http://wbond.net/sublime_packages/package_control/installation).
 * `SublimeLinter` runs in the background (by default), linting files for style and potential errors.
 * Season to taste (edit configuration) by editing `Preferences->Package Settings->SublimeLinter->Settings - User`.
 * Produce better code!
 
-
-Installing
-----------
-
-_Note:_ The package is a fork of the original plugin and does not work with Package Control.
-To install SublimeLinter for Sublime Text 3, run the following commands:
-
-```sh
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-rm -Rf SublimeLinter # remove outdated plugin
-git clone https://github.com/ubilabs/SublimeLinter.git
-```
 
 ### JavaScript-based linters
 If you plan to edit files that use a JavaScript-based linter (JavaScript, CSS), your system
