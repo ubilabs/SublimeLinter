@@ -39,7 +39,7 @@ DELAYS = (
 # "alpha", "bright", "dark", "hard" and "simple"
 MARK_THEMES = ('alpha', 'bright', 'dark', 'hard', 'simple')
 # The path to the built-in gutter mark themes
-MARK_THEMES_PATH = os.path.join('..', 'SublimeLinter', 'gutter_mark_themes')
+MARK_THEMES_PATH = os.path.join('Packages', 'SublimeLinter', 'gutter_mark_themes')
 # The original theme for anyone interested the previous minimalist approach
 ORIGINAL_MARK_THEME = {
     'violation': 'dot',
@@ -261,6 +261,7 @@ def add_lint_marks(view, lines, error_underlines, violation_underlines, warning_
                         gutter_mark_image = os.path.join(MARK_THEMES_PATH, gutter_mark_theme + '-' + lint_type)
                     else:
                         gutter_mark_image = gutter_mark_theme + '-' + lint_type
+                    gutter_mark_image += '.png'
 
                 args.append(gutter_mark_image)
 
@@ -756,20 +757,13 @@ class BackgroundLinter(sublime_plugin.EventListener):
     def on_load(self, view):
         reload_settings(view)
 
-        sublimelinter_setting = view.settings().get('sublimelinter')
-
-        if view.is_scratch() or sublimelinter_setting is False or sublimelinter_setting == 'save-only':
+        if view.is_scratch() or view.settings().get('sublimelinter') is False or view.settings().get('sublimelinter') == 'save-only':
             return
 
         queue_linter(select_linter(view), view, event='on_load')
 
     def on_post_save(self, view):
-        sublimelinter_setting = view.settings().get('sublimelinter')
-
-        if sublimelinter_setting == None:
-            reload_settings(view)
-
-        if view.is_scratch() or sublimelinter_setting is False:
+        if view.is_scratch() or view.settings().get('sublimelinter') is False:
             return
 
         reload_view_module(view)
