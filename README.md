@@ -37,12 +37,13 @@ Quickstart
 Installing
 ----------
 
-_Note:_ The package is a fork of the original plugin and does not work with Package Control. 
+_Note:_ The package is a fork of the original plugin and does not work with Package Control.
 To install SublimeLinter for Sublime Text 3, run the following commands:
 
 ```sh
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-git clone https://github.com/ubilabs/SublimeLinter3.git
+rm -Rf SublimeLinter # remove outdated plugin
+git clone https://github.com/ubilabs/SublimeLinter.git
 ```
 
 ### JavaScript-based linters
