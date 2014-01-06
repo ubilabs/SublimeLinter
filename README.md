@@ -392,3 +392,5 @@ If your linter has more complex requirements, see the comments for CONFIG in bas
 Beta
 ----
 The SublimeLinter Beta package is available via Package Control. The beta version is considered unstable and should only be used for testing the next release. If you like living on the edge, please report any bugs you find on the [SublimeLinter issues](https://github.com/SublimeLinter/SublimeLinter/issues) page.
+
+[![Analytics](https://ga-beacon.appspot.com/UA-57649-14/sublime-linter)](https://github.com/igrigorik/ga-beacon)
